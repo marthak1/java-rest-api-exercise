@@ -1,6 +1,7 @@
 package com.cbfacademy.restapiexercise.ious;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.UUID;
 
 public interface IOUService {
@@ -18,7 +19,7 @@ public interface IOUService {
      * @param id The ID of the IOU to retrieve.
      * @return The IOU with the specified ID, or null if not found.
      */
-    IOU getIOU(UUID id);
+    IOU getIOU(UUID id) throws NoSuchElementException;
 
     /**
      * Create a new IOU.

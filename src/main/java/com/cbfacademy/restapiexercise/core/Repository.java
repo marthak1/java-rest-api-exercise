@@ -2,6 +2,7 @@ package com.cbfacademy.restapiexercise.core;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.UUID;
 
 public interface Repository<T, ID extends Serializable> {
 
@@ -31,10 +32,10 @@ public interface Repository<T, ID extends Serializable> {
     /**
      * Deletes an entity from the repository based on its unique identifier.
      *
-     * @param entity the entity to update
+     * @param id the entity to update
      * @return true if the entity was successfully deleted; otherwise false
      */
-    void delete(T entity) throws IllegalArgumentException, PersistenceException;
+    void delete(UUID id) throws IllegalArgumentException, PersistenceException;
 
     /**
      * Updates an existing entity in the repository.
